@@ -1,0 +1,48 @@
+/*#bp30 {*/
+    /*margin: 0 auto;*/
+/*}*/
+
+/*.animation     {*/
+/*width: 100px;*/
+/*height: 100px;*/
+/*background-color: red;*/
+/*-webkit-animation-name: example; !* Safari 4.0 - 8.0 *!*/
+/*-webkit-animation-duration: 4s; !* Safari 4.0 - 8.0 *!*/
+/*animation-name: example;*/
+/*animation-duration: 4s;*/
+
+/*}*/
+
+/*!* Safari 4.0 - 8.0 *!*/
+/*@-webkit-keyframes example {*/
+/*from {background-color: red;}*/
+/*to {background-color: yellow;}*/
+/*}*/
+
+/*!* Standard syntax *!*/
+/*@keyframes example {*/
+/*from {background-color: red;}*/
+/*to {background-color: yellow;}*/
+/*}*/
+
+.author {
+  display: block;
+  text-align: right;
+  color: #896fe1;
+  font-weight: bold;
+}
+
+h1 {
+  background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+img {
+  height: 500px;
+  width: 650px;
+}
+
+span.js {
+  font-size: 1.5em;
+}
