@@ -81,4 +81,5 @@ span.js {
 
 a.link-to-source {
   text-decoration: underline;
+  display: block;
 }
