@@ -177,7 +177,7 @@ console.log('Bye');</code></pre>
       <section>
         <h3>Event Loop</h3>
         <p>It is infinitely looping and looking for new tasks to
-          execute. </b></p>
+          execute.</p>
         <p class="fragment highlight-blue" data-fragment-index="1">Generic task sources</p>
         <ul class="fragment" data-fragment-index="2">
           <li>The DOM manipulation</li>
@@ -216,13 +216,49 @@ console.log('Bye');</code></pre>
       </section>
     </section>
     <section>
-      <h3>Event Loop. Practice</h3>
+      <section>
+        <h3>Event Loop. Practice</h3>
+        <pre><code>
+          console.log('script start');
 
+          setTimeout(function() {
+            console.log('setTimeout');
+          }, 0);
+
+          Promise.resolve().then(function() {
+            console.log('promise1');
+          }).then(function() {
+          console.log('promise2');
+          });
+
+          console.log('script end');
+        </code></pre>
+        <p>What is expected in Browser console?</p>
+      </section>
+      <section>
+        <h3>In console on 12.2018</h3>
+        <img src="img/compare-browsers-now.png" alt="Compare browsers now">
+      </section>
+      <section>
+        <h3>What if we check older version?</h3>
+        <img src="img/ff-comparison.png" alt="Compare FF versions">
+      </section>
+      <section>
+        <h3>More examples:</h3>
+        <a class="link-to-source" href="https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/" target="_blank">Tasks,
+          microtasks, queues and schedules</a>
+        <img src="img/visit-link.gif" class="visit-link" alt="Visit the link above">
+      </section>
     </section>
     <section>
-      <a href="http://latentflip.com/loupe/" target="_blank">Loupe visualisation (how call stack/event
+      <section><a class="link-to-source" href="http://latentflip.com/loupe/" target="_blank">Loupe visualisation (how call stack/event
         loop/callback queue interact with each other)</a>
-      <img src="img/loop-test.gif" class="loop-test" alt="Loupe visualisation">
+        <img src="img/loop-test.gif" class="loop-test-single" alt="Loupe visualisation">
+      </section>
+      <section><a href="http://latentflip.com/loupe/" target="_blank">What happens if the user clicks multiple
+        times?</a>
+        <img src="img/many_clicks.gif" class="loop-test" alt="Loupe visualisation">
+      </section>
     </section>
     <section>
       <h3>Useful links</h3>
@@ -244,8 +280,8 @@ console.log('Bye');</code></pre>
       </ul>
     </section>
     <section>
-      <h3>Any questions (can event loop)</h3>
-      <address>My contact info</address>
+      <h3>Any questions ?</h3>
+      <img src="img/loop-cat.gif" alt="Cap spinning a pillow">
     </section>
   </div>
 </div>

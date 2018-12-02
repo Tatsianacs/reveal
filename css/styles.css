@@ -70,5 +70,15 @@ span.js {
 }
 
 .loop-test {
+  width: 900px;
+  height: 600px;
+}
 
+.loop-test-single {
+  width: 900px;
+  height: 500px;
+}
+
+a.link-to-source {
+  text-decoration: underline;
 }
