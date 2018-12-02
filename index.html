@@ -188,10 +188,14 @@ console.log('Bye');</code></pre>
       </section>
       <section>
         <p><span class="highlighted">A task queue</span> is an ordered list of tasks</p>
-        <p class="fragment" data-fragment-index="1">An event loop has <span class="highlighted">one or more macrotask</span> task queues.</p>
-        <p class="fragment" data-fragment-index="2">An event loop <span class="highlighted">only one microtask queue.</span></p>
+        <p class="fragment" data-fragment-index="1">An event loop has <span
+                class="highlighted">one or more macrotask</span> task queues.</p>
+        <p class="fragment" data-fragment-index="2">An event loop <span
+                class="highlighted">only one microtask queue.</span></p>
         <ul class="fragment" data-fragment-index="3">
-          <li><span class="highlighted">macrotasks:</span> setTimeout, setInterval, setImmediate, requestAnimationFrame, I/O, UI rendering</li>
+          <li><span class="highlighted">macrotasks:</span> setTimeout, setInterval, setImmediate, requestAnimationFrame,
+            I/O, UI rendering
+          </li>
           <li><span class="highlighted">microtasks:</span> Promises, Object.observe, MutationObserver</li>
         </ul>
       </section>
@@ -202,17 +206,23 @@ console.log('Bye');</code></pre>
           <li>After that macrotask is complete, the event loop visits the microtask queue.</li>
           <li>The entire microtask queue is completed before moving on.</li>
         </ul>
-        <p class="fragment highlight-current-blue grow" data-fragment-index="2">This entire process of reading code, queueing up tasks, and executing tasks is the event loop.</p>
+        <p class="fragment highlight-current-blue grow" data-fragment-index="2">This entire process of reading code,
+          queueing up tasks, and executing tasks is the event loop.</p>
       </section>
       <section>
-      <h3>Engine Specific</h3>
-      <p>Handling and definition of macrotask vs microtask is up to the engine specifically</p>
+        <h3>Engine Specific</h3>
+        <p>Handling and definition of macrotask vs microtask is up to the engine specifically</p>
         <img src="img/js_engines.png" class="js-engines" alt="JS Engines">
       </section>
     </section>
     <section>
-      <h3>So event loop is used...</h3>
-      <p>To coordinate events, user interaction, scripts, rendering, networking, and so forth</p>
+      <h3>Event Loop. Practice</h3>
+
+    </section>
+    <section>
+      <a href="http://latentflip.com/loupe/" target="_blank">Loupe visualisation (how call stack/event
+        loop/callback queue interact with each other)</a>
+      <img src="img/loop-test.gif" class="loop-test" alt="Loupe visualisation">
     </section>
     <section>
       <h3>Useful links</h3>
