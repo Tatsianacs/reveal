@@ -1,19 +1,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Reveal.js 3 Slide Demo</title>
+  <title>Rolling Scopes Presentation</title>
   <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/theme/sky.css" id="theme">
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="css/theme/league.css" id="theme">
   <link rel="stylesheet" href="lib/css/zenburn.css">
-  <!-- Printing and PDF exports -->
+  <link rel="stylesheet" href="css/styles.css">
   <script>
-    var link = document.createElement( 'link' );
+    var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
   </script>
 </head>
 
@@ -21,7 +19,7 @@
 <div class="reveal">
   <div class="slides">
     <section class="main-slide">
-      <h1>Event Loop. CSS Animation</h1>
+      <h1 class="main-slide">Event Loop. CSS Animation</h1>
       <span class=" author">by Tatsiana Masiukevich</span>
     </section>
     <!--Need to add 2 sections here: CSS /Event Loop-->
@@ -32,54 +30,207 @@
       <span class="fragment highlight-green" data-fragment-index="3">one thing at a time</span>
     </section>
     <section>
-      <h3>The Call Stack</h3>
-      <img src="img/event_loop.png" alt="Runtime Overview">
+      <h3>The Runtime</h3>
+      <img src="img/event_loop.png" class="runtime-example" alt="Runtime Overview">
     </section>
     <section>
-      <h3>Example of callstack with multiple functions which calls one another</h3>
-      <p>....</p>
+      <section>
+        <h3>Event Loop</h3>
+        <img src="img/event_loop_animated.gif" class="event-loop-example" alt="Event Loop example">
+        <pre><code>console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+      </section>
+      <section>
+              <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/1.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/2.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/3.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/4.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/5.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/6.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/7.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/8.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/9.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/10.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/11.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/12.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/13.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/14.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/15.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+      <section>
+          <pre><code class="test">console.log('Hi');
+setTimeout(function cb1() {
+    console.log('cb1');
+}, 5000);
+console.log('Bye');</code></pre>
+        <img src="img/event_loop/16.png" class="event-loop-example" alt="Event Loop example">
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h3>Event Loop</h3>
+        <p>It is infinitely looping and looking for new tasks to
+          execute. </b></p>
+        <p class="fragment highlight-blue" data-fragment-index="1">Generic task sources</p>
+        <ul class="fragment" data-fragment-index="2">
+          <li>The DOM manipulation</li>
+          <li>The user interaction</li>
+          <li>The networking</li>
+          <li>The history traversal</li>
+        </ul>
+      </section>
+      <section>
+        <p><span class="highlighted">A task queue</span> is an ordered list of tasks</p>
+        <p class="fragment" data-fragment-index="1">An event loop has <span class="highlighted">one or more macrotask</span> task queues.</p>
+        <p class="fragment" data-fragment-index="2">An event loop <span class="highlighted">only one microtask queue.</span></p>
+        <ul class="fragment" data-fragment-index="3">
+          <li><span class="highlighted">macrotasks:</span> setTimeout, setInterval, setImmediate, requestAnimationFrame, I/O, UI rendering</li>
+          <li><span class="highlighted">microtasks:</span> Promises, Object.observe, MutationObserver</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Event Loop</h3>
+        <ul class="fragment" data-fragment-index="1">
+          <li>For each loop of the ‘event loop’ one macrotask is completed out of the macrotask queue</li>
+          <li>After that macrotask is complete, the event loop visits the microtask queue.</li>
+          <li>The entire microtask queue is completed before moving on.</li>
+        </ul>
+        <p class="fragment highlight-current-blue grow" data-fragment-index="2">This entire process of reading code, queueing up tasks, and executing tasks is the event loop.</p>
+      </section>
+      <section>
+      <h3>Engine Specific</h3>
+      <p>Handling and definition of macrotask vs microtask is up to the engine specifically</p>
+        <img src="img/js_engines.png" class="js-engines" alt="JS Engines">
+      </section>
     </section>
     <section>
-  <pre><code data-trim data-noescape>
-defmodule Math do
-  <mark>def sum(a, b) do
-    a + b
-  end</mark>
-end
-  </code></pre>
-    </section>
-    <section>
-      <h3>Example of Task queues and Web APIs</h3>
-      <p>....</p>
-    </section>
-    <section>
-      <h3>So event loop do: ...</h3>
-      <p>....</p>
-    </section>
-    <section>
-      <h3>Example complex according to spec</h3>
-      <p>....</p>
-    </section>
-    <section>
-      <h3>Test it in different browser</h3>
-      <p>....</p>
-    </section>
-    <section>
-      <p class="fragment" data-fragment-index="3">Appears 3</p>
-      <div class="fragment" data-fragment-index="2" id="bp30"></div>
-      <p class="fragment" data-fragment-index="1">Appears 1</p>
+      <h3>So event loop is used...</h3>
+      <p>To coordinate events, user interaction, scripts, rendering, networking, and so forth</p>
     </section>
     <section>
       <h3>Useful links</h3>
       <ul>
-        <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/EventLoop" target="_blank">MDN, Concurrency model and Event Loop</a></li>
-        <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop" target="_blank">W3C HTML5 - Event loop</a></li>
-        <li><a href="https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/" target="_blank">Tasks, microtasks, queues and schedules</a></li>
-        <li><a href="http://latentflip.com/loupe/" target="_blank">Loupe visualisation (how call stack/event loop/callback queue interact with each other)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank">Philip Roberts: What the heck is the event loop anyway?</a></li>
+        <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/EventLoop" target="_blank">MDN, Concurrency
+          model and Event Loop</a></li>
+        <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop" target="_blank">W3C HTML5 -
+          Event loop</a></li>
+        <li><a href="https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/" target="_blank">Tasks,
+          microtasks, queues and schedules</a></li>
+        <li><a href="http://latentflip.com/loupe/" target="_blank">Loupe visualisation (how call stack/event
+          loop/callback queue interact with each other)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank">Philip Roberts: What the heck is the
+          event loop anyway?</a></li>
         <li><a href="https://www.youtube.com/watch?v=cCOL7MC4Pl0" target="_blank">Jake Archibald: In The Loop</a></li>
         <li><a href="https://csstriggers.com/" target="_blank">CSS triggers (animation) </a></li>
-        <li><a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/" target="_blank">Chrome Dev Tool: Analyzing Runtime Performance</a></li>
+        <li><a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/" target="_blank">Chrome
+          Dev Tool: Analyzing Runtime Performance</a></li>
       </ul>
     </section>
     <section>
@@ -89,6 +240,7 @@ end
   </div>
 </div>
 <script src="lib/js/head.min.js"></script>
+<script src="js/custom.js"></script>
 <script src="js/reveal.js"></script>
 <script>
   // More info https://github.com/hakimel/reveal.js#configuration
@@ -102,13 +254,29 @@ end
 
     // More info https://github.com/hakimel/reveal.js#dependencies
     dependencies: [
-      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-      { src: 'plugin/search/search.js', async: true },
-      { src: 'plugin/zoom-js/zoom.js', async: true },
-      { src: 'plugin/notes/notes.js', async: true }
+      {
+        src: 'lib/js/classList.js', condition: function () {
+          return !document.body.classList;
+        }
+      },
+      {
+        src: 'plugin/markdown/marked.js', condition: function () {
+          return !!document.querySelector('[data-markdown]');
+        }
+      },
+      {
+        src: 'plugin/markdown/markdown.js', condition: function () {
+          return !!document.querySelector('[data-markdown]');
+        }
+      },
+      {
+        src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+          hljs.initHighlightingOnLoad();
+        }
+      },
+      {src: 'plugin/search/search.js', async: true},
+      {src: 'plugin/zoom-js/zoom.js', async: true},
+      {src: 'plugin/notes/notes.js', async: true}
     ]
   });
 </script>

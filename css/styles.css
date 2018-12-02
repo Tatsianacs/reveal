@@ -1,5 +1,5 @@
 /*#bp30 {*/
-    /*margin: 0 auto;*/
+/*margin: 0 auto;*/
 /*}*/
 
 /*.animation     {*/
@@ -32,17 +32,39 @@
   font-weight: bold;
 }
 
-h1 {
+.main-slide h1 {
+  background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+h3 {
   background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-img {
-  height: 500px;
+img.runtime-example {
+  height: 450px;
   width: 650px;
+}
+
+img.event-loop-example {
+  height: 300px;
+  width: 600px;
 }
 
 span.js {
   font-size: 1.5em;
+}
+
+.highlighted {
+    color: #99e052;
+    font-weight: bold;
+}
+
+.js-engines {
+  width: 900px;
+  height: 200px;
 }
