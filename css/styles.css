@@ -1,30 +1,3 @@
-/*#bp30 {*/
-/*margin: 0 auto;*/
-/*}*/
-
-/*.animation     {*/
-/*width: 100px;*/
-/*height: 100px;*/
-/*background-color: red;*/
-/*-webkit-animation-name: example; !* Safari 4.0 - 8.0 *!*/
-/*-webkit-animation-duration: 4s; !* Safari 4.0 - 8.0 *!*/
-/*animation-name: example;*/
-/*animation-duration: 4s;*/
-
-/*}*/
-
-/*!* Safari 4.0 - 8.0 *!*/
-/*@-webkit-keyframes example {*/
-/*from {background-color: red;}*/
-/*to {background-color: yellow;}*/
-/*}*/
-
-/*!* Standard syntax *!*/
-/*@keyframes example {*/
-/*from {background-color: red;}*/
-/*to {background-color: yellow;}*/
-/*}*/
-
 .author {
   display: block;
   text-align: right;
@@ -60,8 +33,8 @@ span.js {
 }
 
 .highlighted {
-    color: #99e052;
-    font-weight: bold;
+  color: #99e052;
+  font-weight: bold;
 }
 
 .js-engines {
