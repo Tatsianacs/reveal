@@ -83,3 +83,7 @@ a.link-to-source {
   text-decoration: underline;
   display: block;
 }
+
+.small-link {
+  font-size: 16px;
+}
