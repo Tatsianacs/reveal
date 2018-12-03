@@ -267,14 +267,95 @@ console.log('Bye');</code></pre>
       <p>The two primary ways to create web animations are by using JavaScript and CSS</p>
     </section>
     <section>
-      <h3>JS Animation</h3>
-      <img src="img/set-inverval.png" alt="setInverval is bad">
-      <img src="img/requestAnimationFrame.png" alt="requestAnimationFrame is good">
+      <section>
+        <h3>JS Animation</h3>
+        <img src="img/set-inverval.png" alt="setInverval is bad">
+        <img src="img/requestAnimationFrame.png" alt="requestAnimationFrame is good">
+      </section>
+      <section>
+        <h3>JS Animation: Web Animations API</h3>
+        <pre><code>
+            var target = document.querySelector('.box');
+            var player = target.animate([
+              {transform: 'translate(0)'},
+              {transform: 'translate(100px, 100px)'}
+            ], 500);
+            player.addEventListener('finish', function() {
+              target.style.transform = 'translate(100px, 100px)';
+            });
+        </code></pre>
+      </section>
+      <section>
+        <h3>JS Animation: Result</h3>
+        <img src="img/js-animate.gif" alt="JS animate">
+    </section>
     </section>
     <section>
-      <h3>CSS Animation</h3>
-      <img src="img/set-inverval.png" alt="setInverval is bad">
-      <img src="img/requestAnimationFrame.png" alt="requestAnimationFrame is good">
+      <section>
+        <h3>CSS Transitions</h3>
+        <pre><code>
+            .box {
+              -webkit-transform: translate(0, 0);
+              -webkit-transition: -webkit-transform 500ms;
+
+              transform: translate(0, 0);
+              transition: transform 500ms;
+            }
+
+            .box.move {
+              -webkit-transform: translate(100px, 100px);
+              transform: translate(100px, 100px);
+            }
+        </code></pre>
+      </section>
+      <section>
+        <h3>CSS Transitions: result</h3>
+        <img src="img/css-transitions.gif" alt="Animated via CSS transiions box">
+      </section>
+      <section>
+        <h3>Can I use CSS transition?</h3>
+        <img src="img/can-i-use-transition.png" alt="Can I use transition?">
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3>CSS Animations</h3>
+        <pre><code class="code-animation">
+            .box {
+              animation-name: movingBox;
+              animation-duration: 2300ms;
+              animation-iteration-count: infinite;
+              animation-direction: alternate;
+            }
+            @keyframes movingBox {
+              0% {
+                transform: translate(0, 0);
+                opacity: 0.4;
+              }
+              25% {
+                opacity: 0.9;
+              }
+              50% {
+                transform: translate(150px, 200px);
+                opacity: 0.2;
+              }
+              100% {
+                transform: translate(40px, 30px);
+                opacity: 0.8;
+              }
+            }
+        </code></pre>
+      </section>
+      <section>
+        <h3>CSS Animation: result</h3>
+        <img src="img/css-transitions.gif" alt="Animated via CSS transiions box">
+      </section>
+      <section>
+        <section>
+          <h3>Can I use CSS animation?</h3>
+          <img src="img/can-i-use-animation.png" alt="Can I use animation?">
+        </section>
+      </section>
     </section>
     <section>
       <section>
@@ -314,7 +395,8 @@ console.log('Bye');</code></pre>
     </section>
     <section>
       <section>
-        <a class="link-to-source" href="http://cssdeck.com/labs/sunsetandmoon" target="_blank">Example: sunset and moon</a>
+        <a class="link-to-source" href="http://cssdeck.com/labs/sunsetandmoon" target="_blank">Example: sunset and
+          moon</a>
         <img src="img/sunset-moon.gif" alt="Animation example sunset and moon">
       </section>
       <section>
