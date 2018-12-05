@@ -1,4 +1,5 @@
 CSS animation and Event Loop
+
 Hello, my Name is Tatsiana and I will show the following presentation about Event Loop and CSS Animation.Let's start from Event Loop.
 As you may have heard JS is singled-threaded, it means it has only one thread, one callstack and one thing at a time can be executed.
 So if a function wants to be executed, it has to wait when the previous one finishes its execution.
